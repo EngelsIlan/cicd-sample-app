@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-cat > app/Dockerfile << _EOF_
+cat > Dockerfile << _EOF_
 FROM node:lts-alpine
 RUN apk add --no-cache python3 g++ make
 WORKDIR /app
