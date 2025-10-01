@@ -7,6 +7,7 @@ RUN apk add --no-cache python3 g++ make
 WORKDIR /app
 COPY . .
 RUN yarn install --production
+EXPOSE 5050
 CMD ["node", "/app/src/index.js"]
 _EOF_
 
