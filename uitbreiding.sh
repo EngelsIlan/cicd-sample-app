@@ -14,3 +14,4 @@ _EOF_
 docker build -t getting-started .
 docker run -t -d -p 3000:3000 --name getting-started getting-started
 docker ps -a 
+docker run getting-started
