@@ -1,3 +1,9 @@
+properties([
+    pipelineTriggers([
+        pollSCM('* * * * *')
+    ])
+])
+
 node {
     stage('Preparation') {
         catchError(buildResult: 'SUCCESS') {
@@ -12,4 +18,4 @@ node {
     stage('Results') {
         build 'TestSampleApp'
     }
-}
+}   
