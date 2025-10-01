@@ -7,11 +7,11 @@ RUN apk add --no-cache python3 g++ make
 WORKDIR /app
 COPY . .
 RUN yarn install --production
-EXPOSE 5050
+EXPOSE 3000
 CMD ["node", "/app/src/index.js"]
 _EOF_
 
 cd app || exit
 docker build -t getting-started .
-docker run -t -d -p 5050:5050 --name getting-started getting-started
+docker run -t -d -p 3000:3000 --name getting-started getting-started
 docker ps -a 
