@@ -9,7 +9,7 @@ node {
         catchError(buildResult: 'SUCCESS') {
             sh 'docker stop samplerunning'
             sh 'docker rm samplerunning'
-            sh 'echo test'
+            sh 'ls -r'
         }
     }
     stage('Build') {
